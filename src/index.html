@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="product" content="guga-guincho">
+    <meta name="description" content="guga-guincho site">
+    <meta name="author" content="guga-guincho">
+    <meta name="format-detection" content="telephone=no,date=no,address=no,email=no" />
+    <!--
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    -->
+
+    <link rel="apple-touch-icon" sizes="180x180" ng-href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" ng-href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" ng-href="assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" ng-href="assets/img/favicon/site.webmanifest">
+    <link rel="mask-icon" ng-href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>guga-guincho</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/dhikfimimcjpoaliefjlffaebdeomeni"> -->
+    <link href="app.less" type="text/css" rel="stylesheet/less">
+</head>
+
+
+<body layout="column" ng-cloak prevent-right-click except="['localhost']">
+    <div id="loading-bar-container"></div>
+    <div ui-view layout="column" class="myApp-views"></div>
+
+    <!-- htmlbuild:remove -->
+    <script src="http://localhost:35729/livereload.js"></script>
+    <script src="lib/less/dist/less.js"></script>
+    <!-- endbuild -->
+    <!-- htmlbuild:js -->
+    <!-- Libraries -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-aria/angular-aria.js"></script>
+    <script src="lib/angular-cookies/angular-cookies.js"></script>
+    <!-- <script src="lib/angular-messages/angular-messages.js"></script> -->
+    <script src="lib/angular-material/angular-material.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/angular-ui-router/release/stateEvents.js"></script>
+    <!-- <script src="lib/angular-loading-bar/build/loading-bar.js"></script> -->
+    <!-- <script src="lib/angular-input-masks/angular-input-masks-standalone.js"></script> -->
+    <!-- <script src="lib/angular-material-sidemenu/dest/angular-material-sidemenu.js"></script> -->
+
+    <!-- site  -->
+    <script src="app.js"></script>
+
+    <!-- controllers -->
+    <script src="partial/site/site.controller.js"></script>
+    <script src="partial/inicio/inicio.controller.js"></script>
+    <script src="partial/contato/contato.controller.js"></script>
+    <script src="partial/404/404.controller.js"></script>
+    <script src="partial/cookies/cookies.controller.js"></script>
+
+    <!-- routes -->
+    <script src="partial/site/site.route.js"></script>
+
+    <!-- services -->
+    <script src="service/animacao.service.js"></script>
+    <script src="service/contato.service.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

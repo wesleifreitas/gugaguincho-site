@@ -1,0 +1,39 @@
+{
+  "name": "guga-guincho-site",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wesleifreitas/guga-guincho",
+  "private": true,
+  "authors": [
+    "guga-guincho"
+  ],
+  "description": "guga-guincho",
+  "main": "src/app.js",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "docs",
+    "src"
+  ],
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-cookies": "^1.8.2",
+    "angular-material": "^1.2.4",
+    "angular-loading-bar": "~0.9.0",
+    "angular-ui-router": "~1.0.7",
+    "less": "^3",
+    "angular-input-masks": "~2.6.0",
+    "angular-material-sidemenu": "https://github.com/wesleifreitas/angular-material-sidemenu.git#develop"
+  },
+  "resolutions": {
+    "angular": "^1.8.2"
+  }
+}

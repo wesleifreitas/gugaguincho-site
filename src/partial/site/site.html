@@ -1,0 +1,186 @@
+<div layout="column" ng-cloak class="site">
+    <md-toolbar layout="row" layout-align="center center" ng-init="vm.init()" class="dark">
+        <div flex layout="row" class="md-toolbar-tools" layout-align="center center">
+            <div flex layout="row" layout-align="space-between center" class="wrapper">
+                <div flex layout="row" layout-align="center" layout-align-gt-sm="center">
+                    <div layout="row" flex layout-align="start center">
+                        <a ui-sref="inicio" ng-click="vm.gotoAnchor('topo')" class="link-logo">
+                            <img class="logo" src="assets/img/logo/logo-h100.png" ng-click="vm.goTo('inicio')">
+                        </a>
+                    </div>
+
+                    <span flex></span>
+
+                    <div layout="row" layout-align="center center" hide show-gt-sm>
+                        <md-menu md-position-mode="target bottom" ng-repeat="menu in vm.menus">
+                            <md-button class="md-primary-hover" ng-click="vm.menuClick(menu, $mdMenu)">
+                                {{menu.name}}
+                            </md-button>
+                            <md-menu-content width="6">
+                                <md-menu-item ng-repeat="submenu in menu.dropdown">
+                                    <md-button ng-click="vm.menuClick(submenu, $mdMenu)">
+                                        {{submenu.name}}
+                                    </md-button>
+                                </md-menu-item>
+                            </md-menu-content>
+                        </md-menu>
+                    </div>
+                </div>
+
+                <md-button class="md-icon-button md-primary menu" aria-label="Navegação" ng-click="vm.showMenuMobile()" hide-gt-sm="" ng-hide="vm.hideMenu">
+                    <md-icon>menu</md-icon>
+                </md-button>
+
+                <!--
+                <div layout="column">
+                    <a flex layout="column" layout-align="center end" href="" target="_blank" rel="noopener noreferrer">
+                        <img class="logo-0" src="assets/img/logo/logo-0-h80.png" ng-click="vm.goTo('inicio')">
+                    </a>
+                </div>
+                -->
+
+                <!--
+                <h2 ng-show="vm.hideMenu" hide-xs>
+                    Política de Privacidade da guga-guincho
+                </h2>
+                -->
+            </div>
+        </div>
+    </md-toolbar>
+
+    <div layout="column" flex class="mobile-menu" ng-if="vm.menuMobile">
+        <md-menu md-position-mode="cascade bottom" ng-repeat="menu in vm.menus">
+            <md-button aria-label="Navegação" class="md-primary md-primary-hover" ng-click="vm.menuClick(menu, $mdMenu)">
+                {{menu.name}}
+            </md-button>
+            <md-menu-content>
+                <md-menu-item ng-repeat="submenu in menu.dropdown">
+                    <md-button ng-click="vm.menuClick(submenu, $mdMenu)">
+                        {{submenu.name}}
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+
+        <md-divider></md-divider>
+
+        <md-button ng-click="vm.menuMobile = false">
+            <md-icon class="md-primary">close</md-icon>
+            Fechar
+        </md-button>
+
+        <!--
+        <md-menu flex>            
+            <md-menu-content>
+                <md-menu-bar layout="column">
+                    <md-menu ng-repeat="menu in vm.menus">
+                        <button ng-click="vm.menuClick(menu, $mdMenu)">
+                            {{menu.name}}
+                        </button>
+                        <md-menu-content>
+                            <md-menu-item ng-repeat="submenu in menu.dropdown">
+                                <md-button>
+                                    {{submenu.name}}
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+
+                    <md-divider></md-divider>
+
+                    <button ng-click="vm.menuMobile = false">
+                        <md-icon class="md-accent">close</md-icon>
+                        Fechar
+                    </button>
+                </md-menu-bar>
+            </md-menu-content>
+            <md-button aria-label="Menu" class="md-icon-button" ng-click="vm.openMenu($mdMenu, $event)">
+                <md-icon md-menu-origin></md-icon>
+            </md-button>
+        </md-menu>
+        -->
+    </div>
+
+    <div id="content" flex>
+        <ui-view class="view"></ui-view>
+
+        <div layout="row" layout-align="center center" flex class="content-rodape">
+            <section id="rodape" class="wrapper" flex layout="column" layout-align="center space-between">
+                <footer flex layout="row" layout-sm="column" layout-xs="column" layout-align="space-between">
+                    <div layout="column">
+                        <!--
+                        <div layout="column">
+                            <h3>guga-guincho</h3>
+                            <p>
+                                <a>Sobre</a>
+                            </p>
+                        </div>
+                        -->
+                        <div layout="column">
+                            <h3>Fale conosco</h3>
+                            <md-button class="md-raised mensagem" ng-href="https://api.whatsapp.com/send?phone=5511974417607&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20guincho.">
+                                <md-icon class="md-primary" md-font-set="fa-brands" md-font-icon="fa-whatsapp"></md-icon>
+                                (11) 97441-7607
+                            </md-button>
+
+                            <!--
+                            <p class="md-body-1">
+                                E-mail: contato@guga-guincho.com.br
+                            </p>
+                            -->
+                        </div>
+                    </div>
+
+                    <!--
+                    <div class="" layout="row" layout-align="center center" layout-padding>
+                        <md-button class="md-fab md-primary" aria-label="Descer" ng-click="vm.gotoAnchor('topo')">
+                            <md-icon>arrow_upward</md-icon>
+                            <md-tooltip md-direction="left">Início</md-tooltip>
+                        </md-button>
+                    </div>
+                    -->
+                    <!--
+                    <div layout="column">
+                        <h3>Navegação</h3>
+                        <p class="md-body-1">
+                            Início
+                        </p>
+                        <p class="md-body-1">
+                            Soluções
+                        </p>
+                    </div>
+                    -->
+                </footer>
+
+                <md-divider></md-divider>
+            </section>
+        </div>
+
+        <div layout="row" layout-align="center center" flex class="content-powered">
+            <div layout="column" layout-align="center center" flex class="wrapper">
+                <div layout="row" layout-align="space-between center" class="end-text">
+                    <div flex>
+                        Powered by&nbsp;<span class="highlight">w</span>solutions.
+                        <br hide-gt-sm>All rights reserved | Todo os direitos reservados © 2023
+                    </div>
+
+                    <!--
+                    <md-button class="md-fab md-mini md-primary" aria-label="Descer" ng-click="vm.gotoAnchor('topo')">
+                        <md-icon>arrow_upward</md-icon>
+                        <md-tooltip md-direction="top">Início</md-tooltip>
+                    </md-button>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<md-sidemenu ng-show="vm.alternar" class="menu-mobile" id="menucontainer">
+    <md-sidemenu-group ng-repeat="menu in vm.menus" class="mm--item">
+        <md-subheader class="md-no-sticky item--titulo " ui-sref="{{menu.codigo ? menu.codigo : menu.state}}" ng-click="vm.menuClick(menu)">{{menu.name}}</md-subheader>
+        <md-sidemenu-content ng-if="menu.dropdown" collapse-other="true " md-arrow="true">
+            <md-sidemenu-button class="mm-submenu" ng-repeat="submenu in menu.dropdown" ui-sref="inicio" ng-click="vm.menuClick(submenu)">{{submenu.name}}</md-sidemenu-button>
+        </md-sidemenu-content>
+    </md-sidemenu-group>
+</md-sidemenu>

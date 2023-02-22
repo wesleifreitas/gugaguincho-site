@@ -1,0 +1,258 @@
+//@import (inline) "partial/site/normalize.css";
+@import "lib/angular-material/angular-material.min.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css");
+//@import url("http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin");
+
+/*
+@import (inline) "lib/angular-loading-bar/build/loading-bar.min.css";
+@import (inline) "lib/angular-material-sidemenu/dest/angular-material-sidemenu.css";
+*/
+
+//@icon-font-path: "lib/bootstrap/fonts/";
+
+/*
+https://scotch.io/courses/getting-started-with-less/responsive-and-media-queries
+@wide-screen-down: ~'(max-width: 1199px)';
+@desktop-down: ~'(max-width: 991px)';
+@tablet-down: ~'(max-width: 767px)';
+@phone-down: ~'(max-width: 480px)';
+@small-phone-down: ~'(max-width: 320px)';
+*/
+
+@wide-screen-down: ~'(max-width: 1199px)';
+@desktop-down: ~'(max-width: 991px)';
+@tablet-down: ~'(max-width: 767px)';
+@phone-down: ~'(max-width: 480px)';
+@small-phone-down: ~'(max-width: 320px)';
+@primary-color: #FFC107;
+@accent-color: #DC143C;
+@light-color: #F7F7F7;
+@dark-color: #222;
+@tip-color: #4F686F;
+@tip-color2: #efefef;
+@toolbar-color: gray;
+// @toolbar-color: #263238; -> cor original
+@toolbar-color: transparent;
+@import "partial/site/site.less";
+//@import "partial/inicio/inicio.less";
+@import "partial/contato/contato.less";
+@import "partial/404/404.less";
+::-webkit-scrollbar {
+	height: 4px;
+	width: 4px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+	background: #888;
+	border-radius: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+	background-color: #E6E6E6;
+	// background-color:#79A686;
+	top: 0 !important;
+	position: unset !important;
+}
+
+body {
+	//padding-top: 80px;
+	.myApp-views {
+		height: 100%;
+	}
+}
+
+.ws-bg {
+	// color 1
+	/*background-color: #772953;
+	background-image: linear-gradient(to bottom left, rgba(119, 41, 83, 0.16) 0, rgba(119, 41, 83, 0.16) 49.9%, transparent 50%), linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%), linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient( -89deg, #e95420 0%, #772953 42%, #2c001e 94%);*/
+	// color 2
+	background-color: #111;
+	background-image: linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0, rgba(216, 216, 216, 0.54) 49.9%, transparent 50%), linear-gradient(to bottom right, rgba(228, 228, 228, 0.54) 0, rgba(228, 228, 228, 0.54) 49.9%, transparent 50%), linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient( 201deg, #4e4e4e 0%, #333 46%, #111 90%);
+	// color 3
+	/*background-color: #326de6;
+	background-image: linear-gradient(to bottom left, rgba(21, 58, 138, 0.16) 0, rgba(21, 58, 138, 0.16) 49.9%, transparent 50%), linear-gradient(to bottom right, rgba(50, 109, 230, 0.5) 0, rgba(50, 109, 230, 0.5) 49.9%, transparent 50%), linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient( 74deg, #173d8b 0%, #326de6 92%);*/
+	// color 4
+	/*background-color: #2b585d;
+	background-image: linear-gradient(to bottom left, rgba(71, 145, 154, 0.16) 0, rgba(71, 145, 154, 0.16) 49.9%, transparent 50%), linear-gradient(to bottom right, rgba(71, 145, 154, 0.16) 0, rgba(71, 145, 154, 0.16) 49.9%, transparent 50%), linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient( 246deg, #47919a 0%, #47919a 53%, #2b585d 100%);*/
+	// default
+	background-blend-mode: multiply, multiply, normal, normal;
+	color: #fff;
+	background-position: top right, top left, right bottom -1px, left top;
+	background-repeat: no-repeat;
+	background-size: 74% 99.83%, 68% 91%, 103.8% 20.26%, 100% 99.8%;
+	/*margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 95rem;*/
+}
+
+.ws-bg-dark {
+	// color 1
+	/*background-color: #772953;
+	background-image: linear-gradient(to bottom left, rgba(119, 41, 83, 0.16) 0, rgba(119, 41, 83, 0.16) 49.9%, transparent 50%), linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%), linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient( -89deg, #e95420 0%, #772953 42%, #2c001e 94%);*/
+	// color 2
+	background-color: #111;
+	background-image: linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0, rgba(216, 216, 216, 0.54) 49.9%, transparent 50%), linear-gradient(to bottom right, rgba(228, 228, 228, 0.54) 0, rgba(228, 228, 228, 0.54) 49.9%, transparent 50%), linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient( 201deg, #4e4e4e 0%, #333 46%, #111 90%);
+	// color 3
+	/*background-color: #326de6;
+	background-image: linear-gradient(to bottom left, rgba(21, 58, 138, 0.16) 0, rgba(21, 58, 138, 0.16) 49.9%, transparent 50%), linear-gradient(to bottom right, rgba(50, 109, 230, 0.5) 0, rgba(50, 109, 230, 0.5) 49.9%, transparent 50%), linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient( 74deg, #173d8b 0%, #326de6 92%);*/
+	// default
+	background-blend-mode: multiply, multiply, normal, normal;
+	color: #fff;
+	background-position: top right, top left, right bottom -1px, left top;
+	background-repeat: no-repeat;
+	background-size: 74% 99.83%, 68% 91%, 103.8% 20.26%, 100% 99.8%;
+	/*margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 95rem;*/
+}
+
+md-toolbar {
+	background-color: @toolbar-color !important;
+	/*h2 {
+		color: white !important;
+	}*/
+}
+
+table.clone thead tr:last-child th {
+	border-bottom: 1px rgba(0, 0, 0, 0.12) solid;
+}
+
+table.clone + md-table-container table tbody tr:first-child td {
+	border-top: block;
+}
+
+md-table-container.fix-head {
+	width: 100%;
+	min-height: 300px;
+	height: 100%;
+	.overflow {
+		background-color: white;
+		overflow: auto;
+		height: 100%;
+	}
+}
+
+.ng-invalid {
+	border-color: #A94442;
+	border-width: 1px;
+}
+
+#loading-bar .bar {
+	background: @accent-color;
+}
+
+#loading-bar-spinner .spinner-icon {
+	border-top-color: @accent-color;
+	border-left-color: @accent-color;
+}
+
+#loading-bar .peg {
+	-moz-box-shadow: @accent-color 1px 0 6px 1px;
+	-ms-box-shadow: @accent-color 1px 0 6px 1px;
+	-webkit-box-shadow: @accent-color 1px 0 6px 1px;
+	box-shadow: @accent-color 1px 0 6px 1px;
+}
+
+md-content {
+	background-color: white;
+}
+
+md-actions {
+	background-color: white;
+	min-height: 50px;
+}
+
+.md-sidemenu-content {
+	display: block;
+}
+
+table[md-table] md-checkbox[disabled] {
+	background-color: #EEEEEE;
+}
+
+.center {
+	text-align: center !important;
+}
+
+.right {
+	text-align: right !important;
+}
+
+.left {
+	text-align: left !important;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.highlight-1 {
+	color: #FFC107;
+}
+
+.highlight-2 {
+	color: #DC143C; //crimson;
+}
+
+
+/*Animação*/
+
+[anima-data] {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+[anima-data="left"] {
+	transform: translate3d(-50px, 0, 0);
+}
+
+[anima-data="right"] {
+	transform: translate3d(50px, 0, 0);
+}
+
+[anima-data="top"] {
+	transform: translate3d(0, -50px, 0);
+}
+
+[anima-data="bottom"] {
+	transform: translate3d(0, 50px, 0);
+}
+
+[anima-data].animate {
+	opacity: 1;
+	transform: translate3d(0px, 0px, 0px);
+}
+
+
+/*fim - animação*/
