@@ -39,6 +39,12 @@
                     animacaoService.animaScroll(target);
                 }, 50));
             }
+
+            $timeout(() => {
+                let v = document.getElementById('guga-guincho-video');
+                v.muted = true;
+                v.play()
+            })
         }
 
         $scope.$on('currentStateUpdate', function (event, args) {
