@@ -231,7 +231,7 @@
         $mdThemingProvider.theme('default')
             // FFC107
             .primaryPalette('primaryPalette')
-            .accentPalette('accentPalette');
+            .accentPalette('orange');
 
         //moment.locale('pt-BR');
 

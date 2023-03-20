@@ -45,7 +45,8 @@
         }*/
     }
     .mobile-menu {
-        background-color: #fff;
+        //background-color: #fff;
+        background-color: #000;
         position: fixed;
         width: 100%;
         height: auto;
@@ -54,6 +55,7 @@
         z-index: 99;
         //border-bottom: 1.5px solid @primary-color;
         button {
+            color: #fff;
             text-align: left;
         }
     }
@@ -187,12 +189,13 @@
                 }
             }
             p.texto {
+                font-weight: 400;
                 margin-top: 38px;
                 text-align: center;
                 width: 100%;
             }
             .expand-more {
-                margin-top: 140px;
+                margin-top: 80px;
                 @media @phone-down {
                     margin-top: 100px;
                 }
@@ -235,17 +238,20 @@
         }
     }
     .content-produto {
-        background-color: #222222;
-        padding-top: 16px;
+        //background-color: #222222;
+        background-color: #fff;
+        padding-top: 0 !important;
         padding-bottom: 16px;
-        color: @accent-color;
+        //color: @accent-color;
+        color: 000;
         @media @tablet-down {
             padding-top: 16px;
         }
         .card {
             min-height: 224px;
-            max-width: 400px;
-            background-color: #fff;
+            max-width: 500px;
+            //background-color: #fff;
+            background-color: #222222;
             margin: 8px 0 16px 0;
             border-radius: 8px;
             .card-title {
@@ -260,19 +266,23 @@
                 }
             }
             .card-content {
-                padding: 0 16px;
+                padding: 0 16px 16px 16px;
                 p, li {
-                    font-weight: 200;
+                    font-weight: 400;
                     font-size: 20px;
                     letter-spacing: 1px;
-                    color: #666666;
+                    color: #fff;
                     margin-bottom: 10px;
-                }
-                p {
-                    text-align: start;
                 }
                 ul {
                     margin: 0!important;
+                }
+                .big {
+                    font-size: 24px;
+                    text-align: center;
+                    @media @tablet-down {
+                        font-size: 20px;
+                    }
                 }
             }
             md-icon {
@@ -287,7 +297,8 @@
         }
         h2 {
             text-align: center;
-            color: #fff;
+            color: #000;
+            //margin-top: -16px;
         }
         .sub-titulo {
             text-align: center;
@@ -321,18 +332,16 @@
             }
         }
     }
-    .content-solucoes {
-        background-color: #fff;
-        //background-color: @accent-color;
-        //background-color: @light-color;
+    .content-regioes {
+        background-color: @dark-color;
         color: #fff;
         h2 {
             text-align: center;
-            color: #000;
+            color: #fff;
             margin: 0 0 16px 0;
         }
         h3 {
-            color: #222222;
+            color: #fff;
         }
         section {
             padding-top: 16px;
@@ -355,7 +364,7 @@
                 }
             }
             ul {
-                color: #000;
+                color: #fff;
                 list-style: circle;
             }
             li {
@@ -399,10 +408,11 @@
     }
     .content-powered {
         background-color: #222;
+        padding: 24px;
         .end-text {
             width: 100%;
             color: #fff;
-            text-align: justify;
+            text-align: center;
             //margin: 8px 0 8px 0 !important;
             font-size: smaller;
             word-spacing: 2px;
