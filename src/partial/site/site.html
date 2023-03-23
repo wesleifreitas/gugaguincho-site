@@ -106,50 +106,89 @@
 
         <div layout="row" layout-align="center center" flex class="content-rodape">
             <section id="rodape" class="wrapper" flex layout="column" layout-align="center space-between">
-                <footer flex layout="row" layout-sm="column" layout-xs="column" layout-align="space-between">
-                    <div layout="column">
-                        <!--
-                        <div layout="column">
-                            <h3>guga-guincho</h3>
-                            <p>
-                                <a>Sobre</a>
-                            </p>
-                        </div>
-                        -->
-                        <div layout="column">
-                            <h3>Fale conosco</h3>
-                            <md-button class="md-raised mensagem" ng-href="https://api.whatsapp.com/send?phone=5511974417607&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20guincho.">
-                                <md-icon class="md-primary" md-font-set="fa-brands" md-font-icon="fa-whatsapp"></md-icon>
-                                (11) 97441-7607
-                            </md-button>
+                <div>
+                    <h2>Guga Guincho</h2>
+                </div>
 
-                            <!--
-                            <p class="md-body-1">
-                                E-mail: contato@guga-guincho.com.br
-                            </p>
-                            -->
+                <footer flex layout-gt-sm="row" layout-align-gt-sm="space-between">
+                    <div layout="row" flex>
+                        <div>
+                            <h3>Site</h3>
+                            <ul>
+                                <li>
+                                    <a ng-click="vm.gotoAnchor('topo')">Inicio</a>
+                                </li>
+                                <li>
+                                    <a ng-click="vm.gotoAnchor('produto')">Serviços</a>
+                                </li>
+                                <li>
+                                    <a ng-click="vm.gotoAnchor('solucoes')">Regiões</a>
+                                </li>
+                                <li>
+                                    <a ng-click="vm.gotoAnchor('pagamentos')">Formas de pagamento</a>
+                                </li>
+                                <!--
+                                <li>
+                                    <a href="/">Políticade Privacidade</a>
+                                </li>
+                                <li>
+                                    <a href="/">Termos de Uso</a>
+                                </li>
+                                -->
+                            </ul>
                         </div>
                     </div>
 
                     <!--
-                    <div class="" layout="row" layout-align="center center" layout-padding>
-                        <md-button class="md-fab md-primary" aria-label="Descer" ng-click="vm.gotoAnchor('topo')">
-                            <md-icon>arrow_upward</md-icon>
-                            <md-tooltip md-direction="left">Início</md-tooltip>
-                        </md-button>
+                    <div layout="row" flex>
+                        <div>
+                            <h3>Siga-nos</h3>
+                            <ul>
+                                <li>
+                                    <a href="/" class="facebook">
+                                        <md-icon md-font-icon="fab fa-facebook"></md-icon>
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/" class="instagram">
+                                        <md-icon md-font-icon="fab fa-instagram"></md-icon>
+                                        Instagram
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
                     </div>
                     -->
-                    <!--
-                    <div layout="column">
-                        <h3>Navegação</h3>
-                        <p class="md-body-1">
-                            Início
-                        </p>
-                        <p class="md-body-1">
-                            Soluções
-                        </p>
+
+                    <div layout="row" flex>
+                        <div>
+                            <h3>Fale Conosco</h3>
+                            <ul>
+                                <!--
+                                <li>
+                                    <a href="/">Perguntas Frequentes</a>
+                                </li>
+                                <li>
+                                    <a ui-sref="contato" ui-sref-active="active">Contato e endereço</a>
+                                </li>
+                                -->
+                                <li>
+                                    <span class="whatsapp">
+                                        <md-icon md-font-icon="fab fa-whatsapp"></md-icon>
+                                        +55 11 97441-7607
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="phone">
+                                        <md-icon md-font-icon="fas fa-phone-alt"></md-icon>
+                                        +55 11 97441-7607
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    -->
                 </footer>
 
                 <md-divider></md-divider>
@@ -161,7 +200,7 @@
                 <div layout="row" layout-align="space-between center" class="end-text">
                     <div flex>
                         Powered by&nbsp;<span class="highlight">w</span>solutions.
-                        <br hide-gt-sm>All rights reserved | Todo os direitos reservados © 2023
+                        <br hide-gt-sm>All rights reserved | Todos os direitos reservados © 2023
                     </div>
 
                     <!--

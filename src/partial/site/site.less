@@ -378,13 +378,54 @@
             }
         }
     }
+    .content-pagamentos {
+        //background-color: #222222;
+        background-color: #fff;
+        padding-top: 0 !important;
+        padding-bottom: 16px;
+        //color: @accent-color;
+        color: 000;
+        @media @tablet-down {
+            padding-top: 16px;
+        }
+        h2 {
+            margin-bottom: 0;
+        }
+        p {
+            margin: 0;
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            @media @phone-down {
+                font-size: 14px;
+            }
+        }
+        .forma-pag {
+            margin: 48px 0;
+            @media @phone-down {
+                margin: 0;
+            }
+            .item {
+                width: 100%;
+                height: 140px;
+                md-icon {
+                    font-size: 120px;
+                    @media @phone-down {
+                        font-size: 80px;
+                    }
+                }
+            }
+        }
+    }
     .content-rodape {
         background-color: @dark-color;
         color: #fff;
-        h3 {
+        h2 {
+            margin-top: 36px;
             margin-bottom: 0;
-            font-size: 16px;
+            padding-bottom: 24px;
+            font-size: 1.4em;
             font-weight: normal;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
         }
         p {
             margin-top: 8px;
@@ -395,14 +436,53 @@
         }
         footer {
             margin: 16px 0;
-        }
-        .mensagem {
-            margin: 8px 0 !important;
-            color: #1BD741;
-            md-icon {
-                color: #1BD741;
-                font-size: 30px;
-                padding: 8px;
+            h3 {
+                font-size: 1.2em;
+                font-weight: 600;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                li {
+                    font-size: 14px;
+                    letter-spacing: 0.25px;
+                    line-height: 1.25;
+                    font-weight: 300;
+                    margin: 15px 0px 24px;
+                    a, span {
+                        color: #fff;
+                        font-size: 16px;
+                        text-decoration: none;
+                        md-icon {
+                            color: #fff;
+                            margin-bottom: 4px;
+                        }
+                        md-icon {
+                            color: #fff;
+                            margin: 0 8px 4px 0;
+                        }
+                    }
+                    span.whatsapp, span.phone {
+                        md-icon {
+                            font-size: 18px;
+                        }
+                    }
+                    a:hover {
+                        color: @primary-color;
+                    }
+                    a.facebook:hover {
+                        color: #1877F2;
+                        md-icon {
+                            color: #1877F2;
+                        }
+                    }
+                    a.instagram:hover {
+                        color: #db2e63;
+                        md-icon {
+                            color: #db2e63;
+                        }
+                    }
+                }
             }
         }
     }
@@ -465,7 +545,7 @@
 
 .whatsapp-float {
     position: fixed;
-    bottom: 48px;
+    bottom: 16px;
     right: 80px;
     z-index: 100;
     @media @tablet-down {
