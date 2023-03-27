@@ -13,7 +13,11 @@ const gulp = require('gulp'),
     webserver = require('gulp-webserver'),
     clean = require('gulp-clean'),
     uglify = require('gulp-uglify-es').default,
-    rename = require("gulp-rename");
+    rename = require("gulp-rename"),
+    stripCssComments = require('gulp-strip-css-comments'),
+    cleanCSS = require('gulp-clean-css'),
+    removeHtmlComments = require("gulp-remove-html-comments"),
+    htmlmin = require('gulp-htmlmin');
 
 const { task, watch, series, parallel } = require('gulp');
 
@@ -235,6 +239,8 @@ task('less', () => {
         .pipe(less({
             paths: [path.join(__dirname, 'less', 'includes')]
         }))
+        .pipe(stripCssComments())
+        //.pipe(cleanCSS())
         //.pipe(cssmin())
         //.pipe(gulp.dest('src/build'))
         .pipe(rename({
@@ -251,6 +257,8 @@ task('material-css', () => {
 
 task('html-files', () => {
     return gulp.src(['src/partial/**/*.html'])
+        .pipe(removeHtmlComments())
+        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('src/build/partial/' + projectBuild));
 });
 
@@ -261,7 +269,8 @@ task('assets', () => {
             'src/assets/**/*.gif',
             'src/assets/**/*.xml',
             'src/assets/**/*.pdf',
-            'src/assets/**/*.webmanifest'
+            'src/assets/**/*.webmanifest',
+            'src/assets/**/*.mp4'
         ])
         .pipe(gulp.dest('src/build/assets/'));
 });
@@ -303,6 +312,8 @@ task('index-replace', () => {
                 .pipe(replace('js/concat.js', 'js/concat.js?v=' + version))
                 .pipe(replace('app.less', 'app.css?v=' + version))
                 .pipe(replace('stylesheet/less', 'stylesheet'))
+                .pipe(removeHtmlComments())
+                .pipe(htmlmin({ collapseWhitespace: true }))
                 .pipe(gulp.dest('src/build'));
         } else {
             gulp.src('src/build/index.html')
@@ -310,6 +321,8 @@ task('index-replace', () => {
                 .pipe(replace('js/concat.js', 'js/concat.js?v=' + version))
                 .pipe(replace('app.less', 'app.css?v=' + version))
                 .pipe(replace('stylesheet/less', 'stylesheet'))
+                .pipe(removeHtmlComments())
+                .pipe(htmlmin({ collapseWhitespace: true }))
                 .pipe(rename({
                     basename: 'index',
                     extname: ".html"

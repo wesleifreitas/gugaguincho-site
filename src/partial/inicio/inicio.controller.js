@@ -37,7 +37,7 @@
             if (target.length) {
                 window.addEventListener('scroll', animacaoService.debounce(() => {
                     animacaoService.animaScroll(target);
-                }, 50));
+                }, 25));
             }
 
             $timeout(() => {
